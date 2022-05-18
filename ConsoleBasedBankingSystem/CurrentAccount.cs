@@ -8,23 +8,31 @@ namespace ConsoleBasedBankingSystem
 {
     internal class CurrentAccount : Account
     {
-        public string acHolderName, bankName, cityName,acType;
-        private int acNumber;
-        
-        
+        //declaring a static field account type bcz it's remain constant to all current acount type objects
+         string accType = "Current Account";
+
         //Providing implimentation for account class abstract methods
-        public override void AcHolderDetails()
+          public override void AcHolderDetails()
         {
-            acHolderName = "Rahul";
-            bankName = "PNB";
-            cityName = "Delhi";
-            acNumber = 230021203;
-            acType = "Current Account";
+            Console.WriteLine("Enter account holder name");
+            acHolderName = Console.ReadLine();
+
+            Console.WriteLine("Enter bank name");
+            bankName = Console.ReadLine();
+
+            Console.WriteLine("Enter city name");
+            cityName = Console.ReadLine();
+
+            Console.WriteLine("Enter ac. number");
+            acNumber = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine();
+
             Console.WriteLine("Account Holder Name: " + acHolderName);
             Console.WriteLine("Bank name: " + bankName);
             Console.WriteLine("City Name: " + cityName);
             Console.WriteLine("Account Number " + acNumber);
-            Console.WriteLine("Account Type: " + acType);
+            Console.WriteLine("Account Type: " + accType);
         }
         public override void MinAllowedBalance()
         {

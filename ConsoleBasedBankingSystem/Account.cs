@@ -8,7 +8,10 @@ namespace ConsoleBasedBankingSystem
 {
     internal abstract class Account : AccoundHolderI
     {
-     
+        //declaration of fields
+        public string acHolderName, bankName, cityName;
+        protected int acNumber;
+
         //only declaring 3 abstract methods
         public abstract void AcHolderDetails();
         public abstract void MinAllowedBalance();

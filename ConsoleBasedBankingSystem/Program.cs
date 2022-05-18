@@ -8,8 +8,9 @@ namespace ConsoleBasedBankingSystem
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(String[] args)
         {
+            Console.WriteLine();
             SavingAccount objS = new SavingAccount();
             objS.AcHolderDetails();
             Console.WriteLine();
@@ -18,13 +19,19 @@ namespace ConsoleBasedBankingSystem
             Console.WriteLine();
 
             objS.InterestRate();
+            Console.WriteLine();
 
 
-            /*CurrentAccount objC = new CurrentAccount();
+            CurrentAccount objC = new CurrentAccount();
             objC.AcHolderDetails();
+            Console.WriteLine();
+
             objC.Withdraw();
+            Console.WriteLine();
+
             objC.InterestRate();
-             */
+            Console.WriteLine();
+
         }
     }
 }
